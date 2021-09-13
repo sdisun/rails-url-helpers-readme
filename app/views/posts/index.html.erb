@@ -1,0 +1,27 @@
+<%
+=begin%>
+<% @posts.each do |post| %>
+<div><a href='<%= "/posts/#{post.id}" %>'><%= post.title %></a></div>
+<% end %>
+<%
+=end%>
+
+<%
+=begin%>
+<% @posts.each do |post| %>
+<div><%= link_to post.title, "/posts/#{post.id}" %></div>
+<% end %>
+<%
+=end%>
+
+<%
+=begin%>
+<% @posts.each do |post| %>
+<div><%= link_to post.title, post_path(post.id) %></div>
+<% end %>
+<%
+=end%>
+
+<% @posts.each do |post| %>
+<div><%= link_to post.title, post_path(post) %></div>
+<% end %>
